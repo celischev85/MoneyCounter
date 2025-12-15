@@ -1,11 +1,12 @@
 package ru.netology.services;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MoneyCounterTest {
     @Test
-    public void shouldCalculateTest() {
+    public void houldCalculateTest() {
         MoneyCounter service = new MoneyCounter();
         int income = 10_000;
         int expenses = 3000;
@@ -13,7 +14,7 @@ class MoneyCounterTest {
         int expected = 3;
 
         int actual = service.calculate(income, expenses, threshold);
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual);
 
     }
 
@@ -26,6 +27,6 @@ class MoneyCounterTest {
         int expected = 2;
 
         int actual = service.calculate(income, expenses, threshold);
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 }
