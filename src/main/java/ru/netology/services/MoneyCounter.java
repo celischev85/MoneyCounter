@@ -9,11 +9,11 @@ public class MoneyCounter {
 
             if (money >= threshold) {
                 money = money - expenses;
-                money = (money - expenses) / 3;
+                money /= 3;
                 counter++;
             } else {
-                money = money + income;
-                money = money - expenses;
+                money += income;
+                money -= expenses;
             }
         }
         return counter;
